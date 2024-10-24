@@ -298,23 +298,19 @@ unsigned char input_buffer_check_empty(  ){
 
 
 unsigned char input_read_notAtCharger(){
-    // type your code for inputs
-    return 0;
+    return !insideGreenArea;
 }
     
 unsigned char input_read_atCharger(){
-    // type your code for inputs
-    return 0;
+    return insideGreenArea;
 }
     
 unsigned char input_read_atWork(){
-    // type your code for inputs
-    return 0;
+    return insideRedArea;
 }
     
 unsigned char input_read_notAtWork(){
-    // type your code for inputs
-    return 0;
+    return !insideRedArea;
 }
     
 
@@ -340,7 +336,7 @@ void callback_work(){
 }
 
 void callback_notAtCharger(){
-    return !insideGreenArea;
+    // type your code here
 }
 
 void callback_charge(){
@@ -348,11 +344,11 @@ void callback_charge(){
 }
 
 void callback_atCharger(){
-    return insideGreenArea;
+    // type your code here
 }
 
 void callback_atWork(){
-    return insideRedArea;
+    // type your code here
 }
 
 void callback_moveToCharge(){
@@ -361,7 +357,7 @@ void callback_moveToCharge(){
 }
 
 void callback_notAtWork(){
-    return !insideRedArea;
+    // type your code here
 }
 
 void callback_moveToWork(){
@@ -603,7 +599,7 @@ void message_rx( message_t *msg, distance_measurement_t *d ) {
             //            if (RED_GOAL_GPS_Y == 26)
             //                set_color(RGB(3,3,3));
 
-            set_goal(RED_GOAL_GPS_X,RED_GOAL_GPS_Y);
+            // set_goal(RED_GOAL_GPS_X,RED_GOAL_GPS_Y);
 
             //            if (Goal_GPS_Y == Goal_GPS_Y)
             //            {
